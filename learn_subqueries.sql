@@ -57,3 +57,30 @@ WHERE ReleaseYear > (
     FROM Song 
     WHERE ID = 800)
 ORDER BY ReleaseYear;
+
+
+-- Example nested query -- 
+SELECT Language
+FROM CountryLanguage
+WHERE Percentage < 
+    (SELECT Percentage
+    FROM CountryLanguage
+    WHERE Language = 'Mbundu');
+
+-- Example Nested Query -- 
+SELECT Language
+FROM CountryLanguage
+WHERE Percentage < 
+    (SELECT Percentage
+    FROM CountryLanguage
+    WHERE IsOfficial = 'F');
+
+-- Example Nested Query -- 
+
+SELECT Language
+FROM CountryLanguage
+WHERE CountryCode = (
+    SELECT Code
+    FROM Country
+    WHERE Name = 'Angola'
+);
