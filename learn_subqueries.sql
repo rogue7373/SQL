@@ -84,3 +84,13 @@ WHERE CountryCode = (
     FROM Country
     WHERE Name = 'Angola'
 );
+
+-- Correlated Subqueries - A subquery that is correlated when the subqury's WHERE clause references a column from the outer query. In a correlated subquery, the rows selected depend on what row is currently being examined by the outer query --
+
+SELECT Name, CountryCode, Population
+FROM City C
+WHERE Population > 2124303.5
+    (SELECT AVG(Population)
+    FROM City
+    WHERE CountryCode = C.CountryCode);
+    
