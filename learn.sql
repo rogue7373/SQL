@@ -142,3 +142,12 @@ SELECT *
 FROM Song
 CROSS JOIN Genre
 ON Song.Code = Genre.Code;
+
+
+
+-- SELECT STATEMENT Practice Naming --
+SELECT COllege.City, StateCode
+FROM College, Location
+WHERE College.City = Location.City;
+
+-- 
