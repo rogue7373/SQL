@@ -150,4 +150,3 @@ SELECT COllege.City, StateCode
 FROM College, Location
 WHERE College.City = Location.City;
 
--- 
