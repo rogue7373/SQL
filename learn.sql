@@ -53,3 +53,28 @@ INSERT INTO Song VALUES
 SELECT Genre, COUNT(*)
 FROM Song
 GROUP BY Genre;
+
+
+-- Inner Join -- 
+SELECT DepartmentName, EmployeeName
+FROM Department -- Left Table
+INNER JOIN Employee -- Right Table
+ON Department.Manager = Employee.ID;
+
+-- Full Join -- 
+SELECT DepartmentName, EmployeeName
+FROM Department 
+FULL JOIN Employee 
+ON Department.Manager = Employee.ID;
+
+-- Right Join Example -- 
+SELECT DepartmentName, EmployeeName
+FROM Department
+RIGHT JOIN Employee
+ON Department.Manager = Employee.ID;
+
+-- Left Join Example -- 
+SELECT DepartmentName, EmployeeName
+FROM Department
+LEFT JOIN Employee
+ON Departmnet.Manager = Employee.ID;
