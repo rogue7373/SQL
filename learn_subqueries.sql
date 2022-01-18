@@ -93,4 +93,11 @@ WHERE Population > 2124303.5
     (SELECT AVG(Population)
     FROM City
     WHERE CountryCode = C.CountryCode);
-    
+
+-- Example --
+SELECT Name, CountryCode 
+FROM City 
+WHERE 2 <=
+    (SELECT COUNT(*)
+    FROM CountryLanguage 
+    WHERE CountryCode = City.CountryCode);
