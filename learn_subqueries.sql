@@ -101,3 +101,12 @@ WHERE 2 <=
     (SELECT COUNT(*)
     FROM CountryLanguage 
     WHERE CountryCode = City.CountryCode);
+
+-- Exmple --
+SELECT Name, CountryCode
+FROM City C
+WHERE 2 <=
+    (SELECT COUNT (*)
+    FROM CountryLanguage
+    WHERE CountryCode = C.CountryCode);
+    
