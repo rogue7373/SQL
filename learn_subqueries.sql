@@ -102,11 +102,27 @@ WHERE 2 <=
     FROM CountryLanguage 
     WHERE CountryCode = City.CountryCode);
 
--- Exmple --
+-- Exmple This subquery will execute once per row in the table --
 SELECT Name, CountryCode
 FROM City C
 WHERE 2 <=
     (SELECT COUNT (*)
     FROM CountryLanguage
     WHERE CountryCode = C.CountryCode);
-    
+
+-- Example Subquery --
+SELECT Name, CountryCode
+FROM City C
+WHERE 2 <=
+    (SELECT COUNT (*)
+    FROM CountryLanguage
+    WHERE CountryCode = C.CountryCode);
+
+-- Example Subquery --
+SELECT Name, CountryCode
+FROM City C
+WHERE EXISTS
+    (SELECT *
+    FROM CountryLanguage
+    WHERE CountryCode = C.CountryCode
+        AND Percentage > 97);
