@@ -126,3 +126,4 @@ WHERE EXISTS
     FROM CountryLanguage
     WHERE CountryCode = C.CountryCode
         AND Percentage > 97);
+
