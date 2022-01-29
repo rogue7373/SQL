@@ -1,0 +1,24 @@
+Notes for SQL Class
+
+Tables - describes all tables 
+Tabes_stats - contains table statistics, such as the number of rows in each table
+Columns - describes all columns 
+Foreign_keys - describes all foreign keys 
+Indexes - describes all indexes 
+routines - describes all stored procedures and stored functions 
+Triggers - describes all triggers 
+
+InnoDB 
+MyISAM
+CSV
+Memory 
+
+
+Transaction Manager comprised of 
+    concurrency systems 
+    recovery systems 
+    lock manager 
+sits on top of DATA ACCESS 
+
+Buffer Manager 
+
