@@ -22,3 +22,16 @@ sits on top of DATA ACCESS
 
 Buffer Manager 
 
+Analysis - develops an entity-relationship model, capturing data requirements while ignoring implementation details.
+    1. Discover entities, relationships, and attributes
+    2. Determine cardinality
+    3. Distinguish indpendent entities
+    4. Create supertype and subtype entities
+Logical Design - Converts the entity-relationship model into tables, columns, and keys for a particular database system.
+    5. Implement entities
+    6. IMplement relationships
+    7. Implement attributes 
+    8. Normalize tables 
+Physical Design - adds indexes and specifies how tables are organized on storage media
+
+Why -- Analysis is important for complex databases with many users when documenting requirements is challenging. 
