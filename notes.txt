@@ -35,3 +35,17 @@ Logical Design - Converts the entity-relationship model into tables, columns, an
 Physical Design - adds indexes and specifies how tables are organized on storage media
 
 Why -- Analysis is important for complex databases with many users when documenting requirements is challenging. 
+
+Attribute Maximum
+
+Singular - each entity instance has at most one attribute instance. 
+
+Plural - each entity instance can have many attribute instances 
+
+Unique - each attribute instance describes at most one entity instance 
+
+Attribute Minimum
+Required - each entity instance has at least one attribute instance 
+
+Optional - each entity instance can have zero attribute instances 
+
