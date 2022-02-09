@@ -49,3 +49,6 @@ Required - each entity instance has at least one attribute instance
 
 Optional - each entity instance can have zero attribute instances 
 
+
+for string in array 
+    if i in string === i++ 
