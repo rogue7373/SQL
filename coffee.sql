@@ -79,16 +79,43 @@ ALTER TABLE Coffee ADD FOREIGN KEY (supplier_id) REFERENCES Supplier(supplier_id
 
 -- Create a View --
 
-CREATE VIEW 
+CREATE VIEW EmployeeView AS 
+    SELECT 
+        employee_id,
+        CONCAT (first_name,
+        last_name) AS employee_full_name,
+        hire_date,
+        job_title,
+        shop_id
+    FROM 
+        Employee
+    
+-- SELECT Statement showing view -- 
+
+SELECT * FROM EmployeeView
 
 -- Create an Index -- 
-CREATE INDEX 
+CREATE INDEX coffe_name ON Coffee (coffee_name);
 
 
 -- SELECT STATEMENTS WITH INNER JOIN --
 
-SELECT Employee.employee_id, Employee.first_name, Employee.last_name, Coffee_Shop.city, Coffee_Shop.shop_name
-FROM Employee
-INNER JOIN Coffee_Shop ON Employee.shop_id = Coffee_Shop.shop_id
+SELECT Employee.employee_id, Employee.first_name, Employee.last_name, Coffee_Shop.city, Coffee_Shop.shop_name, Coffee.coffee_name
+FROM ((Employee
+INNER JOIN Coffee_Shop ON Employee.shop_id = Coffee_Shop.shop_id)
+INNER JOIN Supplier ON Coffee.supplier_id = Supplier.supplier_id);
 
 
+SELECT * 
+FROM Employee, Coffee_Shop, Coffee, Supplier
+
+
+SELECT * 
+FROM Coffee 
+WHERE coffee_name = 'Mocha';
+
+
+SELECT Employee.employee_id, Employee.first_name, Employee.last_name, Coffee_Shop.city, Coffee_Shop.shop_name, Coffee.coffee_name
+FROM ((Employee
+INNER JOIN Coffee_Shop ON Employee.shop_id = Coffee_Shop.shop_id)
+INNER JOIN Coffee ON Coffee_Shop.shop_id = Coffee.shop_id);
