@@ -70,3 +70,5 @@ CREATE INDEX
 SELECT Employee.employee_id, Employee.first_name, Employee.last_name, Coffee_Shop.city, Coffee_Shop.shop_name
 FROM Employee
 INNER JOIN Coffee_Shop ON Employee.shop_id = Coffee_Shop.shop_id
+
+
