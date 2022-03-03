@@ -119,3 +119,6 @@ SELECT Employee.employee_id, Employee.first_name, Employee.last_name, Coffee_Sho
 FROM ((Employee
 INNER JOIN Coffee_Shop ON Employee.shop_id = Coffee_Shop.shop_id)
 INNER JOIN Coffee ON Coffee_Shop.shop_id = Coffee.shop_id);
+
+
+--- Confirmed passed the class with this table configuration -- 
